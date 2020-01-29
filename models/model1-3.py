@@ -1,3 +1,6 @@
+import math
+
+
 def reward_function(params):
     '''
     Example of rewarding the agent to follow center line
@@ -37,7 +40,7 @@ def reward_function(params):
     point1 = waypoints[closest_waypoints[1]]
     point0 = waypoints[closest_waypoints[0]]
 
-    track_direction = math.atan2(next_point[1] - prev_point[1], next_point[0] - prev_point[0])
+    track_direction = math.atan2(point1[1] - point0[1], point1[0] - point0[0])
 
     track_direction = math.degrees(track_direction)
 

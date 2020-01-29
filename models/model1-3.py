@@ -41,8 +41,10 @@ def reward_function(params):
     point0 = waypoints[closest_waypoints[0]]
 
     track_direction = math.atan2(point1[1] - point0[1], point1[0] - point0[0])
+    turn_direction = math.atan2(point1[1] - point0[1], point1[0] - point0[0])
 
     track_direction = math.degrees(track_direction)
+    turn_direction = math.degrees(track_direction)
 
     direction_diff = abs(track_direction - heading)
     if direction_diff > 180:
